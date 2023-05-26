@@ -29,7 +29,10 @@ export default function Detail() {
     }
 
     function sendWhatsapp() {
-        Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${message}`);
+        let phoneNumber;
+        if(String(incident.whatsapp).length === 11) {phoneNumber= '+55'+incident.whatsapp}
+        else {phoneNumber=incident.whatsapp}
+        Linking.openURL(`whatsapp://send?phone=${phoneNumber}&text=${message}`);
     }
 
     return (
