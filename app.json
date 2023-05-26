@@ -18,7 +18,8 @@
       "backgroundColor": "#E02041"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/efca083d-57b6-419b-835d-edc8d897b662"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -31,6 +32,15 @@
     "android": {
       "package": "com.Suiguetsu.bethehero",
       "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "efca083d-57b6-419b-835d-edc8d897b662"
+      }
+    },
+    "owner": "babyface",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
