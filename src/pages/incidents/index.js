@@ -31,11 +31,11 @@ export default function Incidents() {
         }
 
         setLoading(true);
-        console.log('entrei');
+        
         const response = await api.get('incidents', {
             params: { page }
         });
-        console.log(response.data);
+      
         
 
 
