@@ -35,8 +35,6 @@ export default function Incidents() {
         const response = await api.get('incidents', {
             params: { page }
         });
-      
-        console.log(response)
 
 
         setIncidents([... incidents, ... response.data]);
