@@ -29,18 +29,18 @@ export default function Incidents() {
         if(total > 0 && incidents.length === total){
             return;
         }
-
+        
         setLoading(true);
         
         const response = await api.get('incidents', {
             params: { page }
         });
       
-        
+        console.log(response)
 
 
         setIncidents([... incidents, ... response.data]);
-        setTotal(response.headers['X-Total-Count']);
+        setTotal(response.headers['x-total-count']);
         setPage(page + 1);
         setLoading(false);
     }
@@ -72,7 +72,7 @@ export default function Incidents() {
                 renderItem={({item : incident}) => (
                     <View style={styles.incident}>
                         <Text style={styles.incidentProperty}> ONG: </Text>
-                        <Text style={styles.incidentValue}> {incident.name} </Text>
+                        <Text style={styles.incidentValue}> {incident.ong.name} </Text>
 
                         <Text style={styles.incidentProperty}> CASO: </Text>
                         <Text style={styles.incidentValue}> {incident.title} </Text>
